@@ -1,0 +1,13 @@
+
+public class demo{
+
+	public static void main (String [] args){
+	//这只是一个git的案例
+
+	System.out.println("this is a  git file demo!!");
+	
+	}
+
+
+
+}
