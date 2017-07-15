@@ -3,7 +3,7 @@ package li.fufuture.balldemo;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
-//–°«Ú¿‡
+//Â∞èÁêÉÁ±ª
 public class Ball {
 
 	private static final int XSIZE=20;
@@ -15,7 +15,26 @@ public class Ball {
 	
 	public void move(Rectangle2D bounds){
 		
+		x+=dx;
+		y+=dy;
 		
+		if (x<bounds.getMinX()) {
+			x=bounds.getMinX();
+			dx=-dx;
+		}
+		if (x+XSIZE>=bounds.getMaxX()) {
+			x=bounds.getMaxX()-XSIZE;
+			dx=-dx;
+		}
+		
+		if (y<bounds.getMinY()) {
+			y=bounds.getMinY();
+			dy=-dy;
+		}
+		if (y+YSIZE>=bounds.getMaxY()) {
+			y=bounds.getMaxY()-YSIZE;
+			dy=-dy;
+		}
 	}
 	
 	public Ellipse2D getShape(){
